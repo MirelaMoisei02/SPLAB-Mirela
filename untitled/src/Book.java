@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
+
     private String title;
     private List<Author> authors;
     private TableOfContents tableOfContents;
@@ -15,7 +16,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Carte: " + title;
+        return "Book: " + title;
     }
 
     public void print() {
@@ -29,12 +30,15 @@ public class Book {
     public int createChapter(String chapterTitle) {
         Chapter chapter = new Chapter(chapterTitle);
         chapters.add(chapter);
+
         return chapters.size() - 1;
     }
 
-    public Chapter getChapter(int index) throws IndexOutOfBoundsException {
+    public Chapter getChapter(int index) throws Exception {
         if(index >= 0 && index < chapters.size()) {
             return chapters.get(index);
-        } else throw new IndexOutOfBoundsException();
+
+        } else throw new Exception();
     }
+
 }
