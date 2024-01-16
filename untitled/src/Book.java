@@ -28,4 +28,8 @@ public class Book extends Section{
 
     public void addContent(Section section) {
     }
+
+    public void accept(Visitor visitor) {
+        visitor.visitBook(this);
+    }
 }
