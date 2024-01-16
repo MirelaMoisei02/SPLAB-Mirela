@@ -25,4 +25,7 @@ public class Book extends Section{
     public void addAuthor(Author author) {
         authors.add(author);
     }
+
+    public void addContent(Section section) {
+    }
 }
